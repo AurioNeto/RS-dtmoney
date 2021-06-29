@@ -29,7 +29,7 @@ export function Summary() {
   );
 
   return (
-    <Container>
+    <Container isPositive={summary.total >= 0}>
       <div>
         <header>
           <p>Entradas</p>

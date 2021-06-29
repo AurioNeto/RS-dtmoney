@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+interface ContainerProps {
+  isPositive: boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
@@ -27,7 +31,7 @@ export const Container = styled.div`
     }
 
     &.highlight-background {
-      background: var(--green);
+      background: ${(props) => props.isPositive ? '#33CC95' : '#E52E40'};
       color: #fff;
     }
   }
